@@ -1,27 +1,32 @@
 import { useEffect } from "react";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/components/sections/HeroSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import StatsSection from "@/components/sections/StatsSection";
+import TorSection from "@/components/sections/TorSection";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "AllSafeAreas";
+    document.title = "AllSafeAreas - Профессиональный поиск мошенников и OSINT-расследования";
+    
+    // Add meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "AllSafeAreas — актуальная главная страница загружается из allsafeareas.ru"
-      );
+      metaDescription.setAttribute('content', 'Профессиональные OSINT-расследования, поиск мошенников и аудит безопасности. Команда экспертов по информационной безопасности для защиты ваших активов.');
     }
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="fixed z-10 bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-3 py-1.5 rounded text-sm">
-        Если сайт блокирует загрузку во фрейме, откройте <a className="underline" href="https://allsafeareas.ru/" target="_blank" rel="noreferrer">allsafeareas.ru</a> или локальный <a className="underline" href="/snapshot" target="_blank" rel="noreferrer">снимок</a>.
-      </div>
-      <iframe
-        title="AllSafeAreas Home"
-        src="https://allsafeareas.ru/"
-        className="w-full h-screen border-0"
-      />
+      <Header />
+      <main>
+        <HeroSection />
+        <ServicesSection />
+        <StatsSection />
+        <TorSection />
+      </main>
+      <Footer />
     </div>
   );
 };
