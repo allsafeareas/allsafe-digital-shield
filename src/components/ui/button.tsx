@@ -9,17 +9,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all",
+        default: "bg-gradient-to-r from-primary to-accent text-primary-foreground hover:shadow-[var(--shadow-glow)] shadow-lg transition-all duration-500 transform hover:scale-105",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-primary/50 bg-background/50 backdrop-blur-sm hover:bg-primary/10 hover:text-primary hover:border-primary transition-all duration-300",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+          "bg-gradient-to-r from-secondary to-accent/80 text-secondary-foreground hover:shadow-[var(--shadow-purple)] transition-all duration-500 transform hover:scale-105",
+        ghost: "hover:bg-accent/20 hover:text-accent-foreground backdrop-blur-sm transition-all duration-300",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--shadow-glow)] hover:shadow-[var(--shadow-cyber)] transition-all duration-300 border border-primary/20",
-        cybersec: "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground hover:from-primary/90 hover:to-primary/70 shadow-lg hover:shadow-[var(--shadow-glow)] transition-all duration-300",
+        hero: "bg-gradient-[var(--gradient-primary)] text-primary-foreground hover:shadow-[var(--shadow-cyber)] shadow-xl transition-all duration-500 transform hover:scale-110 border border-primary/30",
+        cybersec: "bg-gradient-[var(--gradient-secondary)] text-secondary-foreground hover:shadow-[var(--shadow-purple)] transition-all duration-500 transform hover:scale-105 border border-accent/30",
+        neon: "bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-[0_0_20px_rgba(255,204,168,0.3)] hover:shadow-[var(--shadow-glow)] transition-all duration-500 transform hover:scale-105",
       },
       size: {
         default: "h-10 px-4 py-2",
