@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/components/sections/HeroSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import StatsSection from "@/components/sections/StatsSection";
+import TorSection from "@/components/sections/TorSection";
 
 const Index = () => {
+  useEffect(() => {
+    document.title = "AllSafeAreas - Профессиональный поиск мошенников и OSINT-расследования";
+    
+    // Add meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Профессиональные OSINT-расследования, поиск мошенников и аудит безопасности. Команда экспертов по информационной безопасности для защиты ваших активов.');
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroSection />
+        <ServicesSection />
+        <StatsSection />
+        <TorSection />
+      </main>
+      <Footer />
     </div>
   );
 };
