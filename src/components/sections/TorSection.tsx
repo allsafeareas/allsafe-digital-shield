@@ -57,8 +57,8 @@ const TorSection = () => {
 
               {/* CTA */}
               <div className="text-center">
-                <Button variant="cybersec" size="lg" className="px-8">
-                  Как подключиться через Tor
+                <Button variant="cybersec" size="lg" className="px-8" asChild>
+                  <a href="/security/tor">Как подключиться через Tor</a>
                 </Button>
               </div>
 

@@ -121,16 +121,22 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                Наши услуги
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6" asChild>
+                <a href="/services" className="flex items-center gap-2">
+                  <Search className="w-5 h-5" />
+                  Наши услуги
+                </a>
               </Button>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button variant="neon" size="lg" className="text-lg px-8 py-6">
-                Консультация
+              <Button variant="neon" size="lg" className="text-lg px-8 py-6" asChild>
+                <a href="/contacts" className="flex items-center gap-2">
+                  <Shield className="w-5 h-5" />
+                  Консультация
+                </a>
               </Button>
             </motion.div>
           </motion.div>

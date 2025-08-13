@@ -31,25 +31,29 @@ const ServicesSection = () => {
       icon: Search,
       title: "Поиск мошенников",
       description: "Профессиональное выявление мошенников по их цифровым следам. Восстановление информации о личности и местонахождении.",
-      features: ["Анализ цифровых следов", "Идентификация личности", "Поиск местонахождения"]
+      features: ["Анализ цифровых следов", "Идентификация личности", "Поиск местонахождения"],
+      link: "/services/fraud-investigation"
     },
     {
       icon: FileSearch,
       title: "OSINT-расследования", 
       description: "Анализ открытых источников информации для сбора доказательств, проверки контрагентов и выявления скрытых связей.",
-      features: ["Сбор доказательств", "Проверка контрагентов", "Выявление связей"]
+      features: ["Сбор доказательств", "Проверка контрагентов", "Выявление связей"],
+      link: "/services/osint-investigation"
     },
     {
       icon: Users,
       title: "Поиск пропавших",
       description: "Поиск людей с использованием современных технологий и OSINT-методов. Деликатный подход и конфиденциальность.",
-      features: ["Современные технологии", "OSINT-методы", "Конфиденциальность"]
+      features: ["Современные технологии", "OSINT-методы", "Конфиденциальность"],
+      link: "/services/missing-persons"
     },
     {
       icon: Shield,
       title: "Аудит безопасности",
       description: "Комплексная проверка ваших цифровых активов на уязвимости и риски. Рекомендации по усилению защиты.",
-      features: ["Проверка уязвимостей", "Анализ рисков", "Рекомендации по защите"]
+      features: ["Проверка уязвимостей", "Анализ рисков", "Рекомендации по защите"],
+      link: "/services/security-audit"
     }
   ];
 
@@ -147,8 +151,8 @@ const ServicesSection = () => {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      <Button variant="outline" className="w-full mt-4 border-primary/30 hover:border-primary">
-                        Подробнее
+                      <Button variant="outline" className="w-full mt-4 border-primary/30 hover:border-primary" asChild>
+                        <a href={service.link}>Подробнее</a>
                       </Button>
                     </motion.div>
                   </CardContent>
@@ -196,8 +200,8 @@ const ServicesSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button variant="cybersec" size="lg">
-                  Узнать о нашей безопасности
+                <Button variant="cybersec" size="lg" asChild>
+                  <a href="/security">Узнать о нашей безопасности</a>
                 </Button>
               </motion.div>
             </motion.div>
